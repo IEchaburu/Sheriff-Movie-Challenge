@@ -19,7 +19,7 @@ const getTopRatedMovies = async () => {
                 image: element.poster_path,
                 genreIds: element.genre_ids,
                 release: element.release_date,
-                reating: element.vote_average
+                rating: element.vote_average
             };
             apiMovies.push(movie);
         });

@@ -2,13 +2,13 @@ require('dotenv').config();
 const axios = require('axios');
 const { API_KEY } = process.env;
 
-// ESTA FUNCION OBTIENE LAS PELICULAS MAS POPULARES DE LA API
+// ESTA FUNCION OBTIENE LAS PELICULAS QUE COINCIDEN CON EL NOMBRE DE LA API
 
-const getPopularMovies = async () => {
+const getMoviesByName = async (name) => {
     const apiMovies = [];
 
     //LE PIDE LAS PELICULAS A LA API
-    const { data } = await axios.get(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${API_KEY}`);
+    const { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${name}&include_adult=false&language=en-US&page=1&api_key=${API_KEY}`);
 
     //RECORRE EL RESULTADO Y AGRUPA LAS PELICULAS EN EL ARRAY apiMovies
     if (data.results) {
@@ -28,4 +28,4 @@ const getPopularMovies = async () => {
     return apiMovies;
 };
 
-module.exports = getPopularMovies;
+module.exports = getMoviesByName;
