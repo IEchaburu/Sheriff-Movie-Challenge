@@ -1,31 +1,6 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
-//import Landing from './Views/Landing/Landing';
+import PopularSeries from './Views/Series/Popular Series/popularSeries';
 //import Nav from './Components/Nav/nav';
 //import Detail from './Views/Detail/detail';
 //import About from './Views/About/about';
@@ -40,9 +15,9 @@ function App() {
       <Routes>
         {/* { location.pathname !== "/"} */}
 
-        {/* <Route exact path='/' component={Landing}/> */}
-
         <Route path="/home" element={<Home/>}/>
+
+        <Route path="/popular_series" element={<PopularSeries/>}/>
 
         {/* <Route path="/detail/:id" component={Detail}/> */}
 

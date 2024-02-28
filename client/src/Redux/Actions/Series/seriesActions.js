@@ -1,5 +1,4 @@
 import axios from "axios";
-import {  } from "./movieActionTypes";
 import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_TOP_RATED_SERIES } from "./seriesActionTypes";
 
 export const getPopularSeries = () => {
