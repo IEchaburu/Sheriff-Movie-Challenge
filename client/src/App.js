@@ -24,30 +24,33 @@
 
 // export default App;
 import './App.css';
-import { Route, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 //import Landing from './Views/Landing/Landing';
 //import Nav from './Components/Nav/nav';
 //import Detail from './Views/Detail/detail';
 //import About from './Views/About/about';
-//import Home from './Views/Home/home';
+import Home from './Views/Home/home';
 //import Create from './Views/Form/form';
 
 function App() {
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
     <div className="App">
-      { location.pathname !== "/" && <Nav/>}
+      <Routes>
+        {/* { location.pathname !== "/"} */}
 
-      {/* <Route exact path='/' component={Landing}/> */}
+        {/* <Route exact path='/' component={Landing}/> */}
 
-      {/* <Route path="/home" component={Home}/> */}
+        <Route path="/home" element={<Home/>}/>
 
-      {/* <Route path="/detail/:id" component={Detail}/> */}
+        {/* <Route path="/detail/:id" component={Detail}/> */}
 
-      {/* <Route path="/create" component={Create}/> */}
+        {/* <Route path="/create" component={Create}/> */}
 
-      {/* <Route path="/about" component={About}/> */}
+        {/* <Route path="/about" component={About}/> */}
+
+      </Routes>
 
     </div>
   );
