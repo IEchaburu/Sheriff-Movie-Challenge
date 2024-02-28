@@ -1,4 +1,5 @@
 import { GET_MOVIES_GENRES, GET_MOVIES_NAME, GET_MOVIE_ID, GET_POPULAR_MOVIES, GET_TOP_RATED_MOVIES } from "../Actions/Movies/movieActionTypes";
+import { GET_POPULAR_SERIES, GET_SERIES_GENRES, GET_SERIES_ID, GET_SERIES_NAME, GET_TOP_RATED_SERIES } from "../Actions/Series/seriesActionTypes";
 
 const initialState = {
     //ESTADOS RELACIONADOS A LAS MOVIES
@@ -6,7 +7,14 @@ const initialState = {
     topRatedMovies: [],
     moviesByName: [],
     movieByID: [],
-    movieGenres: []
+    movieGenres: [],
+
+    //ESTADOS RELACIONADOS A LAS SERIES
+    popularSeries: [],
+    topRatedSeries: [],
+    seriesByName: [],
+    serieByID: [],
+    seriesGenres: []
 };
 
 
@@ -44,6 +52,34 @@ const rootReducer = (state = initialState, action) => {
             };
 
         //CASOS RELACIONADOS A LAS SERIES
+        case GET_POPULAR_SERIES:
+            return {
+                ...state,
+                popularSeries: action.payload
+            };
+        case GET_TOP_RATED_SERIES:
+            return {
+                ...state,
+                topRatedSeries: action.payload
+            };
+        case GET_SERIES_NAME:
+            if (action.payload.length === 0) {
+                window.alert("The serie wasn't found")
+            }
+            return {
+                ...state,
+                seriesByName: action.payload,
+            };
+        case GET_SERIES_ID:
+            return {
+                ...state,
+                serieByID: action.payload
+            };
+        case GET_SERIES_GENRES:
+            return {
+                ...state,
+                seriesGenres: action.payload
+            };
             
         default:
             return state;
