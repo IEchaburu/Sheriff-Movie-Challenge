@@ -1,11 +1,10 @@
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import PopularSeries from './Views/Series/Popular Series/popularSeries';
-//import Nav from './Components/Nav/nav';
-//import Detail from './Views/Detail/detail';
-//import About from './Views/About/about';
 import Home from './Views/Home/home';
-//import Create from './Views/Form/form';
+import TopRatedSeries from './Views/Series/Top Rated Series/topRatedSeries';
+
+
 
 function App() {
   // const location = useLocation();
@@ -18,6 +17,9 @@ function App() {
         <Route path="/home" element={<Home/>}/>
 
         <Route path="/popular_series" element={<PopularSeries/>}/>
+
+        <Route path="/top_rated_series" element={<TopRatedSeries/>}/>
+
 
         {/* <Route path="/detail/:id" component={Detail}/> */}
 

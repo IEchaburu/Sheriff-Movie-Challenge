@@ -17,7 +17,7 @@ export const getPopularSeries = () => {
     }
 };
 
-export const getTopRateSeries = () => {
+export const getTopRatedSeries = () => {
     return async (dispatch) => {
         try {
             const { data } = await axios.get("http://localhost:3001/serie/top_rated_series")
