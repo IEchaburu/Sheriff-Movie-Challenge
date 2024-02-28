@@ -1,0 +1,8 @@
+.nav-item.dropdown {
+    margin-left: 100px; /* Ajusta el margen derecho */
+    font-size: 20px;
+}
+
+.nav-item.dropdown:last-child {
+    margin-left: 30px; /* Elimina el margen derecho del último elemento */
+}
