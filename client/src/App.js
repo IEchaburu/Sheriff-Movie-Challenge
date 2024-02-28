@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import PopularSeries from './Views/Series/Popular Series/popularSeries';
 import Home from './Views/Home/home';
 import TopRatedSeries from './Views/Series/Top Rated Series/topRatedSeries';
+import TopRatedMovies from './Views/Movies/topRatedMovies';
 
 
 
@@ -19,6 +20,9 @@ function App() {
         <Route path="/popular_series" element={<PopularSeries/>}/>
 
         <Route path="/top_rated_series" element={<TopRatedSeries/>}/>
+
+        <Route path="/top_rated_movies" element={<TopRatedMovies/>}/>
+
 
 
         {/* <Route path="/detail/:id" component={Detail}/> */}

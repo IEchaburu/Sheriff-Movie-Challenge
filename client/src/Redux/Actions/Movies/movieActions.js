@@ -17,7 +17,7 @@ export const getPopularMovies = () => {
     }
 };
 
-export const getTopRateMovies = () => {
+export const getTopRatedMovies = () => {
     return async (dispatch) => {
         try {
             const { data } = await axios.get("http://localhost:3001/movie/top_rated_movies")
