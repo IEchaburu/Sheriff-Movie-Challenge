@@ -6,16 +6,20 @@ import TopRatedSeries from './Views/Series/Top Rated Series/topRatedSeries';
 import TopRatedMovies from './Views/Movies/topRatedMovies';
 import MovieDetail from './Views/Details/Movie Details/movieDetails';
 import SerieDetail from './Views/Details/Serie Details/serieDetails';
+import Nav from './Components/Nav Bar/navBar';
 
 
 
 function App() {
-  // const location = useLocation();
+  const location = useLocation();
 
   return (
     <div className="App">
+
+        <Nav/>
+
       <Routes>
-        {/* { location.pathname !== "/"} */}
+        {/* <Route path="/" element={<Nav/>}/> */}
 
         <Route path="/home" element={<Home/>}/>
 
