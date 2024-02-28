@@ -1,4 +1,6 @@
 import Card from "../../Card/Movies/movieCard";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { useEffect, useState } from "react";
 
 const Cards = ({ movies }) => {
@@ -14,7 +16,7 @@ const Cards = ({ movies }) => {
       console.log(movies.length);
     
     return (
-        <div>            
+        <div className="row row-cols-1 row-cols-md-3 g-4 justify-content-center m-5 grid gap-4">            
             { dataLoaded ? (
                 movies?.map((movie) => {
                     return (
@@ -23,12 +25,14 @@ const Cards = ({ movies }) => {
                             id={movie.id}
                             name={movie.name}
                             image={movie.image}
+                            release={movie.release}
+                            rating={movie.rating}
                             // genres={videogame.genres}
                         />
                     )
                 })
                 ) :
-                <h1>Cargando...</h1>
+                <h1>Loading...</h1>
                 
             }
         </div>

@@ -17,7 +17,7 @@ const PopularSeries =() => {
         
     return (
       <div>
-        <h2>UMOVIE</h2>
+        {/* <h2>UMOVIE</h2> */}
         <div>
             <Cards series={popularSeries} /> 
         </div>   
