@@ -13,7 +13,7 @@ const Card = (props) => {
     return (
         <div>
             <div>
-                <Link to={`/detail/${props.id}`}>
+                <Link to={`/serie_detail/${props.id}`}>
                     <p>{props.name}</p>
                 </Link>
             </div>
