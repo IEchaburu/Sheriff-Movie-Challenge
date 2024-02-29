@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { useEffect, useState } from "react";
 
-const Cards = ({ movies, genres }) => {
+const Cards = ({ movies }) => {
     const [dataLoaded, setDataLoaded] = useState(false);
 
     useEffect(() => {
@@ -28,7 +28,6 @@ const Cards = ({ movies, genres }) => {
                             release={movie?.release}
                             rating={movie?.rating}
                             genres={movie?.genreIds}
-                            allGenres={genres}
                         />
                     )
                 })

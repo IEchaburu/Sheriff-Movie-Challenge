@@ -1,7 +1,7 @@
 import Cards from "../../../Components/Cards/Series/seriesCards";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPopularSeries } from '../../../Redux/Actions/Series/seriesActions';
+import { getPopularSeries, getSeriesGenres } from '../../../Redux/Actions/Series/seriesActions';
 
 
 
@@ -10,7 +10,7 @@ const PopularSeries =() => {
     const popularSeries = useSelector((state) => state.popularSeries);
     
     useEffect(() => {
-        //dispatch(getGenres());
+        dispatch(getSeriesGenres());
         dispatch(getPopularSeries());
     }, [dispatch]);
     

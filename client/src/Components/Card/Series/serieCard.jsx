@@ -2,15 +2,23 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './SerieCard.css';
+import { useSelector } from 'react-redux';
 
 
 const Card = (props) => {
-    
-    // let genres = [];
-    
-    // props.genres?.forEach((genre) => {
-    //     generos.push(genre.name)
-    // })
+    const seriesGenres = useSelector((state) => state.seriesGenres);
+    let genres = [];
+
+
+    // ESTA FUNCION COMPARA LOS ID DE LOS GENEROS DE LAS SERIES CONTRA
+    // TODOS LOS GENEROS PARA ASI PODER ALAMACENAR LOS NOMBRES DEL GENERO RESPECTIVO
+    props.genres?.forEach(element => {
+        seriesGenres.forEach(sGenre => {
+            if (element == sGenre.id) {
+                genres.push(sGenre.name);
+            }
+        })
+    })
 
 
     return (
@@ -19,7 +27,8 @@ const Card = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{props.name}</h5>
                     <p className="card-text">{props?.rating}</p>
-                    <a href={`http://localhost:3000/serie_detail/${props.id}`} className="btn btn-primary">Learn More</a>
+                    <p className="card-text">{genres?.join(', ')}</p>
+                    <a href={`/serie_detail/${props.id}`} className="btn btn-primary">Learn More</a>
             </div>
       </div>
     )

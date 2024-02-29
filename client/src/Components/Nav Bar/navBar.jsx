@@ -17,11 +17,11 @@ const Nav = () => {
                                 Movies
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="http://localhost:3000/home">
+                                <li><a className="dropdown-item" href="/home">
                                         Popular
                                     </a>
                                 </li>
-                                <li><a className="dropdown-item" href="http://localhost:3000/top_rated_movies">
+                                <li><a className="dropdown-item" href="/top_rated_movies">
                                         Top Rated
                                     </a>
                                 </li>
@@ -33,11 +33,11 @@ const Nav = () => {
                                 Series
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="http://localhost:3000/popular_series">
+                                <li><a className="dropdown-item" href="/popular_series">
                                         Popular
                                     </a>
                                 </li>
-                                <li><a className="dropdown-item" href="http://localhost:3000/top_rated_series">
+                                <li><a className="dropdown-item" href="/top_rated_series">
                                         Top Rated
                                     </a>
                                 </li>

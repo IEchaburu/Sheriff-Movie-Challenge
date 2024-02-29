@@ -1,7 +1,7 @@
 import Cards from "../../Components/Cards/Movies/movieCards";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTopRatedMovies } from "../../Redux/Actions/Movies/movieActions";
+import { getMovieGenres, getTopRatedMovies } from "../../Redux/Actions/Movies/movieActions";
 
 
 
@@ -10,7 +10,7 @@ const TopRatedMovies =() => {
     const topRatedMovies = useSelector((state) => state.topRatedMovies);
     
     useEffect(() => {
-        //dispatch(getGenres());
+        dispatch(getMovieGenres());
         dispatch(getTopRatedMovies());
     }, [dispatch]);
     

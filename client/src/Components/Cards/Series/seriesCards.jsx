@@ -14,7 +14,7 @@ const Cards = ({ series }) => {
             setDataLoaded(false);
         }
       }, [series]);
-      console.log(series.length);
+      
     
     return (
         <div className="row row-cols-1 row-cols-md-3 g-4 justify-content-center m-5 grid gap-4">            
@@ -22,18 +22,18 @@ const Cards = ({ series }) => {
                 series?.map((serie) => {
                     return (
                         <Card
-                            key={serie.id}
-                            id={serie.id}
-                            name={serie.name}
-                            image={serie.image}
-                            release={serie.release}
-                            rating={serie.rating}
-                            // genres={videogame.genres}
+                            key={serie?.id}
+                            id={serie?.id}
+                            name={serie?.name}
+                            image={serie?.image}
+                            release={serie?.release}
+                            rating={serie?.rating}
+                            genres={serie?.genreIds}
                         />
                     )
                 })
                 ) :
-                <h1>Cargando...</h1>
+                <h1>Loading...</h1>
                 
             }
         </div>

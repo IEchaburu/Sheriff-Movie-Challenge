@@ -8,7 +8,6 @@ import { getMovieGenres, getPopularMovies } from "../../Redux/Actions/Movies/mov
 const Home =() => {
     const dispatch = useDispatch();
     const popularMovies = useSelector((state) => state.popularMovies);
-    const movieGenres = useSelector((state) => state.movieGenres);
     
     useEffect(() => {
         dispatch(getMovieGenres());
@@ -20,7 +19,7 @@ const Home =() => {
       <div>
         {/* <h2>UMOVIE</h2> */}
         <div>
-            <Cards movies={popularMovies} genres={movieGenres} /> 
+            <Cards movies={popularMovies}/> 
         </div>   
       </div>
     );
