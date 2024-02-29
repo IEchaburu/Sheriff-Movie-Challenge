@@ -1,17 +1,24 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './MovieCard.css';
 
 
 const Card = (props) => {
-    
-    // let genres = [];
-    
-    // props.genres?.forEach((genre) => {
-    //     generos.push(genre.name)
-    // })
+    const movieGenres = useSelector((state) => state.movieGenres);
+    let genres = [];
 
+    // ESTA FUNCION COMPARA LOS ID DE LOS GENEROS DE LA PELICULA CONTRA
+    // TODOS LOS GENEROS PARA ASI PODER ALAMACENAR LOS NOMBRES DEL GENERO RESPECTIVO
+    props.genres?.forEach(element => {
+        movieGenres.forEach(mGenre => {
+            if (element == mGenre.id) {
+                genres.push(mGenre.name);
+            }
+        })
+    })
+    
 
     return (
         
@@ -20,9 +27,10 @@ const Card = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{props.name}</h5>
                     <p className="card-text">{props?.rating}</p>
-                    <a href={`http://localhost:3000/movie_detail/${props.id}`} className="btn btn-primary">Learn More</a>
+                    <p className="card-text">{genres?.join(', ')}</p>
+                    <a href={`/movie_detail/${props.id}`} className="btn btn-primary">Learn More</a>
             </div>
-      </div>
+        </div>
     )
 }
 
