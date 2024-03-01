@@ -15,5 +15,6 @@ router.use('/movie', movie_router);
 router.use('/serie', serie_router)
 router.use('/users', users_router)
 router.use('', genre_router);
+//router.use('', passport_router)
 
 module.exports = router;

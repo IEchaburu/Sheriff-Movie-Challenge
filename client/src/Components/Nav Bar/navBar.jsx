@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './Nav.css';
+import SearchBar from "../Search Bar/searchBar";
 
-
-//import SearchBar from "../Search Bar/searchBar";
 
 const Nav = () => {
     return (
@@ -44,6 +43,7 @@ const Nav = () => {
                             </ul>
                         </li>
                     </ul>
+                    <SearchBar/>
                 </div>
             </div>
         </nav>

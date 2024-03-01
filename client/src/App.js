@@ -7,6 +7,7 @@ import TopRatedMovies from './Views/Movies/topRatedMovies';
 import MovieDetail from './Views/Details/Movie Details/movieDetails';
 import SerieDetail from './Views/Details/Serie Details/serieDetails';
 import Nav from './Components/Nav Bar/navBar';
+import Login from './Views/Login/login';
 
 
 
@@ -32,6 +33,8 @@ function App() {
         <Route path="/movie_detail/:id" element={<MovieDetail/>}/>
 
         <Route path="/serie_detail/:id" element={<SerieDetail/>}/>
+
+        <Route path="/login" element={<Login/>}/>
 
 
         {/* <Route path="/detail/:id" component={Detail}/> */}
