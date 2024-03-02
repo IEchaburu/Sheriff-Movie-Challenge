@@ -9,6 +9,7 @@ import SerieDetail from './Views/Details/Serie Details/serieDetails';
 import Nav from './Components/Nav Bar/navBar';
 import Login from './Views/Login/login';
 import SearchedMovies from './Views/Search/Movies/movieSearch';
+import SearchedSeries from './Views/Search/Series/serieSearch';
 
 
 
@@ -36,6 +37,8 @@ function App() {
         <Route path="/serie_detail/:id" element={<SerieDetail/>}/>
 
         <Route path="/movies_search" element={<SearchedMovies/>}/>
+
+        <Route path="/series_search" element={<SearchedSeries/>}/>
 
         <Route path="/login" element={<Login/>}/>
 
